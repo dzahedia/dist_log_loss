@@ -27,14 +27,14 @@ def dist_log_loss(y_true, ypred, labels=[]):
     """
     
     losses = []
-    if len(lab_ord):
-        for tr, prob in zip(true,prob):
-            pt = prob[lab_ord.index(tr)]
+    if len(labels):
+        for tr, prob in zip(y_true,y_pred):
+            pt = prob[labels.index(tr)]
             losses.append(-log(pt))
     else:
-        labord = sorted(list(set(true)))
-        for tr, prob in zip(true,prob):
-            pt = prob[labord.index(tr)]
+        fit_labels = sorted(list(set(y_true)))
+        for tr, prob in zip(y_true,y_pred):
+            pt = prob[fit_labels.index(tr)]
             losses.append(-log(pt))
     d = stats.describe(losses)
     return {'mean':d.mean, 'variance': d.variance, 'skewness':d.skewness, 'kurtosis':d.kurtosis}
