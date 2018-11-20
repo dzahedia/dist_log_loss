@@ -1,7 +1,7 @@
 from scipy import stats
 from math import log
 
-def dist_log_loss(y_true, ypred, labels=[]):
+def dist_log_loss(y_true, y_pred, labels=[]):
     """Log loss, aka logistic loss or cross-entropy loss.
     
     For a single sample with true label yt in {0,1} and
