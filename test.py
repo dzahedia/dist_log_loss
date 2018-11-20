@@ -22,4 +22,4 @@ for k in ls.keys():
 #   9g9b7g 		 {'mean': 0.7616650816510221, 'variance': 0.33356112174828945, 'skewness': 2.010784111427777, 'kurtosis': 3.4917114339583613}
 #   9g9b7g9g 		 {'mean': 0.7028864151608103, 'variance': 0.37706019555161346, 'skewness': 1.833955183433394, 'kurtosis': 2.920378861340641}
 
-# the first and the first prediction have the same mean ( same log loss) but different variance and skewness
+# the first and the last prediction have the same mean ( same log loss) but different variance and skewness
